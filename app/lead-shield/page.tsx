@@ -125,11 +125,11 @@ export default function LeadShieldPage() {
               <p className="body-md mb-4">
                 Our Fraud Prevention Scorecards are calculated in real time across a
                 comprehensive set of data points. We develop three scorecards:{" "}
-                <span className="text-[#027fff] font-semibold">MNFS</span> (Mobile Number
+                <span className="text-[#f59e0b] font-semibold">MNFS</span> (Mobile Number
                 Fraud Score),{" "}
-                <span className="text-[#027fff] font-semibold">EMFS</span> (Email Fraud
+                <span className="text-[#f59e0b] font-semibold">EMFS</span> (Email Fraud
                 Score) and{" "}
-                <span className="text-[#027fff] font-semibold">IPFS</span> (IP Fraud Score).
+                <span className="text-[#f59e0b] font-semibold">IPFS</span> (IP Fraud Score).
               </p>
               <p className="body-md">
                 Scores are calculated based on over 30 data points, mobile reverse lookups,
@@ -142,7 +142,7 @@ export default function LeadShieldPage() {
                 {"// Sample API response"}
               </div>
               <div className="space-y-2">
-                <div className="text-[#027fff]">{"{"}</div>
+                <div className="text-[#f59e0b]">{"{"}</div>
                 <div className="pl-4">
                   <span className="text-[#8b8fa8]">&quot;phone&quot;</span>
                   <span className="text-white">: &quot;+44-XXXXXXX&quot;,</span>
@@ -176,7 +176,7 @@ export default function LeadShieldPage() {
                   <span className="text-white">: </span>
                   <span className="text-red-400 font-bold">&quot;DECLINE&quot;</span>
                 </div>
-                <div className="text-[#027fff]">{"}"}</div>
+                <div className="text-[#f59e0b]">{"}"}</div>
               </div>
             </div>
           </div>
@@ -219,7 +219,7 @@ export default function LeadShieldPage() {
                 <div className="text-[#8b8fa8]"># Install</div>
                 <div className="text-white">npm install @senolytics/lead-shield</div>
                 <div className="mt-4 text-[#8b8fa8]"># Validate a lead</div>
-                <div className="text-[#027fff]">
+                <div className="text-[#f59e0b]">
                   {"import { LeadShield }"}
                   <span className="text-white"> from &apos;@senolytics/lead-shield&apos;</span>
                 </div>

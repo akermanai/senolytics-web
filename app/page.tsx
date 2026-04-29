@@ -1,96 +1,67 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata = {
-  title: "senolytics.ai — AI-Powered Data & Lead Intelligence",
-  description: "AI-driven lead validation, fraud prevention and funnel optimisation for financial services, insurance and competitive industries.",
+  title: "Senolytics.ai — Conversion Intelligence Powered by AI",
+  description: "AI-based products to help businesses in ultra-competitive markets boost conversion rates, reduce acquisition costs and prevent fraud.",
 };
-
-const stats = [
-  { value: "97%+", label: "Fraud Detection Accuracy", desc: "Across phone, email and IP signals" },
-  { value: "100ms", label: "API Response Time", desc: "Real-time validation at any scale" },
-  { value: "40+", label: "Data Signals", desc: "Per lead validation request" },
-  { value: "€0.1", label: "Per Complete Check", desc: "No subscription, no hidden fees" },
-];
-
-const products = [
-  {
-    tag: "Lead Validation",
-    title: "LeadShield",
-    desc: "Real-time phone, email and IP validation. Fraud scorecards with 40+ data points. Built for financial services and regulated industries.",
-    href: "/lead-shield",
-    accent: "amber",
-  },
-  {
-    tag: "Conversion",
-    title: "Funnel Optimisation",
-    desc: "AI-driven funnel analysis that identifies drop-off points, personalises user journeys and increases conversion rates.",
-    href: "/funnel-optimization",
-    accent: "blue",
-  },
-  {
-    tag: "Innovation",
-    title: "AI Innovation Lab",
-    desc: "Custom AI model development, NLP pipelines and machine learning solutions tailored to your industry and data.",
-    href: "/ai-innovation-lab",
-    accent: "blue",
-  },
-];
-
-const whyAI = [
-  {
-    title: "Speed at Scale",
-    desc: "Manual validation of leads, emails and phone numbers doesn't scale. AI processes millions of signals in real time — 100ms per check, 24/7, with no human bottleneck.",
-  },
-  {
-    title: "Pattern Recognition",
-    desc: "Fraud patterns evolve daily. Our models learn from dark-net leaks, carrier databases and fraud network activity — continuously updating without re-training cycles.",
-  },
-  {
-    title: "Actionable Scores",
-    desc: "Raw data is noise. We distil 40+ signals into a single, actionable score with a clear APPROVE / REVIEW / DECLINE recommendation your pipeline can act on immediately.",
-  },
-  {
-    title: "Compliance Built In",
-    desc: "All data processed in EU data centres. GDPR, FCA and ISO 27001 compliant by default. No data leaves the EU for EU and UK customers.",
-  },
-];
 
 export default function HomePage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative bg-[#03032e] pt-36 pb-32 overflow-hidden">
+      <section className="relative bg-[#03032e] pt-32 pb-28 overflow-hidden">
         <div className="hero-glow absolute inset-0 pointer-events-none" />
-        <div className="max-w-6xl mx-auto px-6 relative text-center">
-          <span className="badge mb-6 inline-flex">AI-Powered Lead Intelligence</span>
-          <h1 className="heading-xl mb-6 max-w-4xl mx-auto">
-            Stop Fraud Before It<br />
-            <span className="text-[#f59e0b]">Enters Your Funnel</span>
-          </h1>
-          <p className="body-lg max-w-2xl mx-auto mb-10">
-            Real-time phone, email and IP validation for financial services, insurance and
-            competitive lead-generation businesses. 97%+ fraud detection accuracy.
-          </p>
-          <div className="flex flex-wrap gap-4 justify-center">
-            <Link href="/lead-shield" className="btn-primary">
-              Explore LeadShield
-            </Link>
-            <Link href="/contact" className="btn-outline">
-              Talk to Us
-            </Link>
+        <div className="max-w-6xl mx-auto px-6 relative">
+          <div className="grid md:grid-cols-2 gap-14 items-center">
+            <div>
+              <span className="badge mb-6 inline-flex">Conversion Intelligence · AI-Powered</span>
+              <h1 className="heading-xl mb-6">
+                Turn Data Into<br />
+                <span className="text-[#f59e0b]">Conversion Power</span>
+              </h1>
+              <p className="body-lg mb-10">
+                We build innovative AI-based products to help businesses in
+                ultra-competitive markets boost{" "}
+                <span className="text-white font-semibold">conversion rates</span>,
+                reduce{" "}
+                <span className="text-white font-semibold">customer acquisition costs</span>{" "}
+                and prevent <span className="text-white font-semibold">fraud</span>.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <Link href="/lead-shield" className="btn-primary">Explore Products</Link>
+                <Link href="/contact" className="btn-outline">Request Information</Link>
+              </div>
+            </div>
+            <div className="flex justify-center">
+              <div className="relative">
+                <div className="absolute inset-0 bg-[#f59e0b]/10 blur-3xl rounded-full scale-75" />
+                <Image
+                  src="/images/conversion-intelligence.png"
+                  alt="Conversion Intelligence AI"
+                  width={480}
+                  height={480}
+                  className="relative rounded-2xl"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Stats bar */}
-      <section className="bg-[#07073a] border-y border-white/[0.06]">
-        <div className="max-w-6xl mx-auto px-6 py-14">
+      {/* Stats */}
+      <section className="bg-[#06063f] border-y border-[rgba(2,127,255,0.15)] py-12">
+        <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            {stats.map((s) => (
-              <div key={s.value}>
-                <div className="stat-value">{s.value}</div>
-                <div className="stat-label">{s.label}</div>
-                <div className="stat-desc">{s.desc}</div>
+            {[
+              { val: "90M+", lbl: "Phone checks / month" },
+              { val: "+67%", lbl: "Lead accuracy gain" },
+              { val: "97%+", lbl: "Fraud detection rate" },
+              { val: "100ms", lbl: "Real-time validation" },
+            ].map((s) => (
+              <div key={s.lbl}>
+                <div className="stat-value">{s.val}</div>
+                <div className="stat-label">{s.lbl}</div>
               </div>
             ))}
           </div>
@@ -101,31 +72,28 @@ export default function HomePage() {
       <section className="bg-[#03032e] section">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="card-dark">
+            <div className="card-glow">
               <div className="blue-line" />
               <h2 className="heading-md mb-4">About Us</h2>
               <p className="body-md mb-4">
-                Senolytics.ai is a data research and artificial intelligence company focused
-                on building intelligence layers for businesses operating in high-risk and
-                highly regulated industries.
+                Senolytics.ai is a data research and development company with a strong
+                business focus. All our products are designed to establish a measurable
+                business optimisation fast.
               </p>
               <p className="body-md">
-                We work with financial services firms, insurance companies and competitive
-                lead generation businesses to protect their funnels and improve the quality
-                of data they act on.
+                We train the world&apos;s most powerful AI models, including OpenAI
+                (ChatGPT), to help your business profit more, reduce the cost of
+                acquisition, gain a competitive edge and prevent fraud.
               </p>
             </div>
-            <div className="card-dark">
+            <div className="card-glow">
               <div className="blue-line" />
-              <h2 className="heading-md mb-4">Our Mission</h2>
-              <p className="body-md mb-4">
-                Our mission is to democratise access to enterprise-grade fraud intelligence.
-                Until recently, the kind of real-time, multi-signal fraud detection we offer
-                was only available to the largest banks and data brokers.
-              </p>
+              <h2 className="heading-md mb-4">Built for Regulated Markets</h2>
               <p className="body-md">
-                We've rebuilt that capability as a clean API — so any business, regardless
-                of size, can validate a lead or detect fraud in under 100 milliseconds.
+                Our team has vast experience with regulatory guidelines including GDPR,
+                ISO 27001 and Financial Conduct Authority (FCA) standards. We develop
+                novel products, models and intellectual property specifically for
+                businesses operating in ultra-competitive, regulated niches.
               </p>
             </div>
           </div>
@@ -133,20 +101,28 @@ export default function HomePage() {
       </section>
 
       {/* Why AI */}
-      <section className="bg-[#07073a] section border-y border-white/[0.06]">
+      <section className="bg-[#06063f] section">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-14">
-            <span className="label block mb-3">Why It Works</span>
-            <h2 className="heading-lg">Why AI — Not Rules</h2>
-          </div>
-          <div className="grid md:grid-cols-2 gap-6">
-            {whyAI.map((item) => (
-              <div key={item.title} className="card-glow">
-                <div className="blue-line" />
-                <h3 className="heading-md mb-3">{item.title}</h3>
-                <p className="body-md">{item.desc}</p>
-              </div>
-            ))}
+          <div className="grid md:grid-cols-2 gap-14 items-center">
+            <div>
+              <span className="label block mb-3">The AI Opportunity</span>
+              <h2 className="heading-lg mb-6">Why AI — and Why Now</h2>
+              <p className="body-lg mb-6">
+                New algorithms and AI models demonstrate unprecedented power and skills.
+                Whether you embrace the AI shift or not is the wrong question — it is
+                happening, and it is happening fast.
+              </p>
+              <p className="text-white text-xl font-semibold">Is your business ready?</p>
+            </div>
+            <div>
+              <span className="label block mb-3">Our Approach</span>
+              <h2 className="heading-lg mb-6">How We Help</h2>
+              <p className="body-lg">
+                Our experienced data engineers and AI products help businesses leverage
+                existing know-how to boost profitability, reduce the cost of acquisition
+                and obtain a winning competitive position — especially in highly regulated niches.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -154,57 +130,109 @@ export default function HomePage() {
       {/* Products */}
       <section className="bg-[#03032e] section">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-14">
+          <div className="mb-14">
             <span className="label block mb-3">Our Products</span>
-            <h2 className="heading-lg">Intelligence for Every Layer</h2>
+            <h2 className="heading-lg mb-4">Three Products, One Mission</h2>
+            <p className="body-lg max-w-2xl">
+              Real-time lead validation, funnel optimisation, and a proprietary
+              model-training lab for enterprise.
+            </p>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
-            {products.map((p) => (
-              <Link
-                key={p.href}
-                href={p.href}
-                className="card-glow group flex flex-col"
-              >
-                <span className={`inline-flex self-start text-xs font-bold uppercase tracking-[0.12em] px-3 py-1 rounded-full mb-5 ${p.accent === "amber" ? "text-[#f59e0b] bg-[#f59e0b]/10 border border-[#f59e0b]/25" : "text-[#027fff] bg-[#027fff]/10 border border-[#027fff]/25"}`}>
-                  {p.tag}
-                </span>
-                <h3 className="heading-md mb-3">{p.title}</h3>
+            {[
+              { title: "Lead Shield", tag: "Live", desc: "Validate mobile phones, emails and IPs in real time. Protect your business from lead fraud with 97%+ accuracy.", href: "/lead-shield" },
+              { title: "Funnel Optimization", tag: "Beta", desc: "AI-powered funnel intelligence that identifies drop-off points and increases conversion across every acquisition step.", href: "/funnel-optimization" },
+              { title: "AI Innovation Lab", tag: "Closed Beta", desc: "Train proprietary models on your own data. Rapid prototyping methodology. Currently open for financial services.", href: "/ai-innovation-lab" },
+            ].map((p) => (
+              <div key={p.title} className="card-glow flex flex-col">
+                <div className="mb-4"><span className="badge">{p.tag}</span></div>
+                <h3 className="text-xl font-bold text-white mb-3">{p.title}</h3>
                 <p className="body-md flex-1 mb-6">{p.desc}</p>
-                <span className="text-[#f59e0b] text-sm font-semibold group-hover:underline">
+                <Link href={p.href} className="text-[#f59e0b] font-semibold text-sm hover:text-[#fbbf24] transition-colors">
                   Learn more →
-                </span>
-              </Link>
+                </Link>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Infrastructure */}
-      <section className="bg-[#07073a] section border-y border-white/[0.06]">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <span className="label block mb-4">Infrastructure</span>
-          <h2 className="heading-lg mb-6">EU Data Centres · Renewable Energy</h2>
-          <p className="body-lg mb-4">
-            Our dedicated data centers are located in Falkenstein, Germany, operated 100% on
-            renewable energy. Data of EU and UK customers never leaves the EU.
-          </p>
-          <p className="body-md">
-            SOC 2 Type II · ISO 27001 · GDPR Compliant · FCA Ready
-          </p>
+      {/* Neural Network */}
+      <section className="bg-[#06063f] section">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-14 items-center">
+            <div>
+              <span className="label block mb-3">Senolytics AI Models</span>
+              <h2 className="heading-lg mb-6">Unprecedented Power</h2>
+              <p className="body-lg mb-6">
+                We aim to become the best AI company for{" "}
+                <span className="text-[#f59e0b] font-semibold">Conversion Intelligence</span>{" "}
+                on earth. Our primary focus is helping companies in ultra-competitive and
+                highly regulated markets improve conversion, reduce CAC and prevent fraud.
+              </p>
+              <p className="body-md">
+                We deploy robust neural networks and technologies specifically trained to
+                achieve concrete goals and show measurable results fast.
+              </p>
+            </div>
+            <div className="flex justify-center">
+              <div className="relative">
+                <div className="absolute inset-0 bg-[#f59e0b]/10 blur-3xl rounded-full scale-75" />
+                <Image
+                  src="/images/senolytics-neural-netwrok.png"
+                  alt="AI Neural Network"
+                  width={460}
+                  height={460}
+                  className="relative rounded-2xl border border-[rgba(2,127,255,0.15)]"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Data Centers */}
+      <section className="bg-[#03032e] section">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-14 items-center">
+            <div className="flex justify-center order-2 md:order-1">
+              <div className="relative">
+                <div className="absolute inset-0 bg-[#f59e0b]/05 blur-3xl rounded-full scale-75" />
+                <Image
+                  src="/images/data-centers.jpg"
+                  alt="Data Centers"
+                  width={460}
+                  height={340}
+                  className="relative rounded-2xl border border-[rgba(2,127,255,0.15)]"
+                />
+              </div>
+            </div>
+            <div className="order-1 md:order-2">
+              <span className="label block mb-3">Infrastructure</span>
+              <h2 className="heading-lg mb-6">Enterprise-Grade Security</h2>
+              <p className="body-lg mb-4">
+                Our data is hosted in SOC 2 Type II and ISO 27001 certified data centres
+                in Falkenstein, Germany, operated 100% by renewable energy.
+              </p>
+              <p className="body-md">
+                Data of EU and UK customers does not leave the EU. We comply with GDPR,
+                FCA and ISO 27001 standards to give you enterprise-grade confidence.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="bg-[#03032e] section">
-        <div className="max-w-3xl mx-auto px-6 text-center">
-          <h2 className="heading-lg mb-4">Ready to Clean Your Funnel?</h2>
-          <p className="body-lg mb-10">
-            Talk to us about how LeadShield can reduce your fraud exposure and increase
-            the quality of leads entering your pipeline.
+      <section className="bg-[#06063f] section border-t border-[rgba(2,127,255,0.15)]">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <span className="label block mb-4">Get Started</span>
+          <h2 className="heading-lg mb-6">Ready to Boost Conversion?</h2>
+          <p className="body-lg max-w-2xl mx-auto mb-10">
+            Our team is ready to show you how Senolytics.ai products can transform
+            your acquisition funnel. Request a demo today.
           </p>
-          <Link href="/contact" className="btn-primary">
-            Get in Touch
-          </Link>
+          <Link href="/contact" className="btn-primary">Request a Demo</Link>
         </div>
       </section>
     </>

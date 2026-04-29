@@ -7,59 +7,69 @@ export default function CookiePolicyPage() {
   return (
     <section className="bg-[#03032e] pt-32 pb-24 min-h-screen">
       <div className="max-w-3xl mx-auto px-6">
-        <span className="text-[#f59e0b] text-xs font-bold uppercase tracking-[0.15em] block mb-4">Legal</span>
-        <h1 className="text-4xl md:text-5xl font-black text-white leading-tight mb-3">Cookie Policy</h1>
-        <p className="text-[#9ca3b8] mb-12">Last updated: January 2024</p>
-        <div className="space-y-10 text-[#9ca3b8] leading-relaxed">
+        <span className="label block mb-4">Legal</span>
+        <h1 className="heading-lg mb-3">Cookie Policy</h1>
+        <p className="text-[#8b8fa8] mb-12">Last updated: January 2024</p>
+        <div className="space-y-10 text-[#8b8fa8] leading-relaxed">
+
           <div>
             <h2 className="text-white font-bold text-xl mb-4">1. What Are Cookies</h2>
-            <p>Cookies are small text files placed on your device when you visit a website. They are widely used to make websites work more efficiently and to provide information to website owners. We use cookies and similar technologies (such as web beacons and pixel tags) on the senolytics.ai website.</p>
+            <p>Cookies are small text files placed on your device when you visit a website. They are widely used to make websites work efficiently and to provide information to the website owner. Cookies can be &ldquo;session&rdquo; cookies (deleted when you close your browser) or &ldquo;persistent&rdquo; cookies (stored on your device for a set period or until you delete them).</p>
           </div>
+
           <div>
-            <h2 className="text-white font-bold text-xl mb-4">2. Who We Are</h2>
-            <p>This Cookie Policy applies to senolytics.ai, operated by <strong className="text-white">Bontida Limited</strong> (Registration: HE431123), Zinonos Kitieos 9, Egkomi 2406, Nicosia, Cyprus. Contact: <a href="mailto:team@senolytics.ai" className="text-[#f59e0b] hover:underline">team@senolytics.ai</a></p>
-          </div>
-          <div>
-            <h2 className="text-white font-bold text-xl mb-4">3. Types of Cookies We Use</h2>
-            <div className="space-y-6 mt-3">
-              <div>
+            <h2 className="text-white font-bold text-xl mb-4">2. How We Use Cookies</h2>
+            <p>Senolytics.ai (operated by Bontida Limited) uses cookies and similar technologies on this website for the following purposes:</p>
+            <div className="mt-6 space-y-4">
+              <div className="bg-[#06063f] border border-[rgba(2,127,255,0.15)] rounded-xl p-6">
                 <h3 className="text-white font-semibold mb-2">Strictly Necessary Cookies</h3>
-                <p>These cookies are essential for the website to function. They enable basic functions like page navigation and access to secure areas. The website cannot function properly without these cookies. They do not require your consent.</p>
+                <p className="text-sm">These cookies are essential for the website to function. They enable core functionality such as security, network management, and accessibility. You may disable these in your browser settings, but this will affect how the website functions.</p>
               </div>
-              <div>
+              <div className="bg-[#06063f] border border-[rgba(2,127,255,0.15)] rounded-xl p-6">
                 <h3 className="text-white font-semibold mb-2">Analytics Cookies</h3>
-                <p>We use analytics cookies to understand how visitors interact with our website. This helps us improve our content and services. We use anonymised, aggregated data only. Where we deploy analytics tools, we configure them to anonymise IP addresses and respect Do Not Track settings.</p>
+                <p className="text-sm">We use analytics tools (such as Google Analytics) to understand how visitors interact with our website. These cookies collect information in an aggregated, anonymised form. They are only set with your consent.</p>
               </div>
-              <div>
-                <h3 className="text-white font-semibold mb-2">Marketing and Retargeting Cookies</h3>
-                <p>We may use marketing cookies to understand which of our marketing campaigns are effective and to show relevant advertising. These cookies are only set with your explicit consent.</p>
+              <div className="bg-[#06063f] border border-[rgba(2,127,255,0.15)] rounded-xl p-6">
+                <h3 className="text-white font-semibold mb-2">Functional Cookies</h3>
+                <p className="text-sm">These cookies enable enhanced functionality and personalisation, such as remembering your preferences. They may be set by us or by third-party providers whose services we have added to our pages.</p>
               </div>
-              <div>
-                <h3 className="text-white font-semibold mb-2">Preference Cookies</h3>
-                <p>These cookies remember your preferences (such as language or region) so that we can provide you with a more personalised experience on return visits.</p>
+              <div className="bg-[#06063f] border border-[rgba(2,127,255,0.15)] rounded-xl p-6">
+                <h3 className="text-white font-semibold mb-2">Marketing Cookies</h3>
+                <p className="text-sm">We may use marketing or targeting cookies to deliver relevant advertising. These are only set with your explicit consent.</p>
               </div>
             </div>
           </div>
+
           <div>
-            <h2 className="text-white font-bold text-xl mb-4">4. Third-Party Cookies</h2>
-            <p>We may allow third-party service providers to place cookies on our website for analytics and performance measurement. These providers are bound by their own privacy policies. We do not permit third-party advertising networks to place cookies on our website without your explicit consent.</p>
+            <h2 className="text-white font-bold text-xl mb-4">3. Third-Party Cookies</h2>
+            <p>Some cookies on our website are placed by third parties, including analytics and advertising services. These third parties have their own privacy policies. We do not control these third-party cookies.</p>
           </div>
+
           <div>
-            <h2 className="text-white font-bold text-xl mb-4">5. Your Cookie Choices</h2>
-            <p>You can manage or disable cookies through your browser settings. Most browsers allow you to refuse cookies, delete cookies that have already been set, or be notified when cookies are placed. Note that disabling certain cookies may affect the functionality of this website.</p>
-            <p className="mt-3">You can also opt out of analytics tracking by most providers through their respective opt-out tools. Links to common opt-out tools are available in our Privacy Policy.</p>
+            <h2 className="text-white font-bold text-xl mb-4">4. Managing Cookies</h2>
+            <p>Most web browsers allow you to manage your cookie preferences through the browser settings. You can set your browser to refuse some or all cookies, or to alert you when websites set or access cookies.</p>
+            <p className="mt-3">For more information on managing cookies, visit <a href="https://www.allaboutcookies.org" target="_blank" rel="noopener noreferrer" className="text-[#f59e0b] hover:underline">allaboutcookies.org</a>.</p>
           </div>
+
+          <div>
+            <h2 className="text-white font-bold text-xl mb-4">5. Your Consent</h2>
+            <p>When you first visit our website, you will be presented with a cookie banner where you can choose which categories of cookies to accept. You may withdraw or change your consent at any time by clearing your browser cookies and revisiting the website, or by contacting us.</p>
+          </div>
+
           <div>
             <h2 className="text-white font-bold text-xl mb-4">6. Updates to This Policy</h2>
-            <p>We may update this Cookie Policy from time to time. Changes will be posted on this page with an updated date. We recommend reviewing this page periodically.</p>
+            <p>We may update this Cookie Policy from time to time. Changes will be posted on this page with an updated date.</p>
           </div>
+
           <div>
             <h2 className="text-white font-bold text-xl mb-4">7. Contact</h2>
             <p>If you have any questions about our use of cookies, please contact us at <a href="mailto:team@senolytics.ai" className="text-[#f59e0b] hover:underline">team@senolytics.ai</a>.</p>
           </div>
+
           <div className="border-t border-white/10 pt-8">
             <p><strong className="text-white">Bontida Limited</strong> (trading as Senolytics.ai)<br />Zinonos Kitieos 9, Egkomi 2406, Nicosia, Cyprus<br />Registration: HE431123</p>
           </div>
+
         </div>
       </div>
     </section>

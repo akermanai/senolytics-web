@@ -1,81 +1,94 @@
-"use client";
-import { useState } from "react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact — senolytics.ai",
+  description: "Get in touch with the Senolytics.ai team.",
+};
 
 export default function ContactPage() {
-  const [form, setForm] = useState({ name: "", email: "", company: "", message: "" });
-  const [sent, setSent] = useState(false);
-
-  function handleSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    setSent(true);
-  }
-
   return (
     <>
-      <section className="bg-[#03032e] pt-32 pb-24">
-        <div className="max-w-6xl mx-auto px-6">
+      <section className="relative bg-[#03032e] pt-32 pb-28 overflow-hidden">
+        <div className="hero-glow absolute inset-0 pointer-events-none" />
+        <div className="max-w-6xl mx-auto px-6 relative">
           <div className="grid md:grid-cols-2 gap-16 items-start">
-            {/* Info */}
+            {/* Left */}
             <div>
-              <h1 className="text-5xl font-black text-white mb-6">Request More Information</h1>
-              <p className="text-gray-300 text-lg leading-relaxed mb-10">
-                Talk to a member of the Senolytics team. We&apos;ll get back to you within 24 hours.
+              <span className="label block mb-4">Get in Touch</span>
+              <h1 className="heading-xl mb-6">
+                Let&apos;s Talk About<br />
+                <span className="text-[#f59e0b]">Your Data Challenge</span>
+              </h1>
+              <p className="body-lg mb-8">
+                Whether you want to explore LeadShield, discuss a custom AI engagement, or
+                just understand if we&apos;re the right fit — send us a message and we&apos;ll
+                respond within one business day.
               </p>
-              <div className="space-y-5">
-                <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 bg-[#027fff]/20 rounded-xl flex items-center justify-center text-[#027fff]">✉</div>
-                  <a href="mailto:team@senolytics.ai" className="text-gray-300 hover:text-[#027fff] transition-colors">team@senolytics.ai</a>
+              <div className="space-y-4 text-[#9ca3b8]">
+                <div className="flex items-center gap-3">
+                  <span className="w-8 h-8 rounded-full bg-[#f59e0b]/10 border border-[#f59e0b]/25 flex items-center justify-center text-[#f59e0b] text-sm">✉</span>
+                  <a href="mailto:team@senolytics.ai" className="text-[#f59e0b] hover:underline">team@senolytics.ai</a>
                 </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 bg-[#027fff]/20 rounded-xl flex items-center justify-center text-[#027fff] shrink-0">📍</div>
-                  <div className="text-gray-400 text-sm">
-                    Bontida Limited<br />
-                    Zinonos Kitieos 9, Egkomi 2406<br />
-                    Nicosia, Cyprus
-                  </div>
+                <div className="flex items-center gap-3">
+                  <span className="w-8 h-8 rounded-full bg-[#f59e0b]/10 border border-[#f59e0b]/25 flex items-center justify-center text-[#f59e0b] text-sm">📍</span>
+                  <span>Zinonos Kitieos 9, Egkomi 2406, Nicosia, Cyprus</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <span className="w-8 h-8 rounded-full bg-[#f59e0b]/10 border border-[#f59e0b]/25 flex items-center justify-center text-[#f59e0b] text-sm">🏢</span>
+                  <span>Bontida Limited · Reg. HE431123</span>
                 </div>
               </div>
             </div>
 
-            {/* Form */}
-            <div className="bg-[#06063f] border border-white/10 rounded-2xl p-8">
-              {sent ? (
-                <div className="text-center py-8">
-                  <div className="text-5xl mb-4">✓</div>
-                  <h2 className="text-2xl font-bold text-white mb-2">Message Sent!</h2>
-                  <p className="text-gray-400">Thank you for reaching out. We&apos;ll be in touch within 24 hours.</p>
+            {/* Right — contact card */}
+            <div className="card-dark border border-[#f59e0b]/15">
+              <h2 className="heading-md mb-6">Send Us a Message</h2>
+              <div className="space-y-5">
+                <div>
+                  <label className="text-[#9ca3b8] text-sm font-medium block mb-2">Your Name</label>
+                  <input
+                    type="text"
+                    className="w-full bg-white/[0.04] border border-white/[0.08] rounded-lg px-4 py-3 text-white placeholder-[#9ca3b8]/50 focus:outline-none focus:border-[#f59e0b]/50 transition-colors"
+                    placeholder="Jane Smith"
+                  />
                 </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-5">
-                  <div className="grid sm:grid-cols-2 gap-5">
-                    <div>
-                      <label className="block text-xs text-gray-400 mb-1.5">Full Name *</label>
-                      <input required type="text" value={form.name} onChange={e => setForm({ ...form, name: e.target.value })}
-                        className="w-full bg-[#03032e] border border-white/10 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-[#027fff]/50"
-                        placeholder="Your name" />
-                    </div>
-                    <div>
-                      <label className="block text-xs text-gray-400 mb-1.5">Email *</label>
-                      <input required type="email" value={form.email} onChange={e => setForm({ ...form, email: e.target.value })}
-                        className="w-full bg-[#03032e] border border-white/10 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-[#027fff]/50"
-                        placeholder="your@email.com" />
-                    </div>
-                  </div>
-                  <div>
-                    <label className="block text-xs text-gray-400 mb-1.5">Company</label>
-                    <input type="text" value={form.company} onChange={e => setForm({ ...form, company: e.target.value })}
-                      className="w-full bg-[#03032e] border border-white/10 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-[#027fff]/50"
-                      placeholder="Your company name" />
-                  </div>
-                  <div>
-                    <label className="block text-xs text-gray-400 mb-1.5">Message</label>
-                    <textarea rows={5} value={form.message} onChange={e => setForm({ ...form, message: e.target.value })}
-                      className="w-full bg-[#03032e] border border-white/10 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-[#027fff]/50 resize-none"
-                      placeholder="Tell us about your business and what you need..." />
-                  </div>
-                  <button type="submit" className="w-full btn-primary justify-center py-3.5">Send Message</button>
-                </form>
-              )}
+                <div>
+                  <label className="text-[#9ca3b8] text-sm font-medium block mb-2">Work Email</label>
+                  <input
+                    type="email"
+                    className="w-full bg-white/[0.04] border border-white/[0.08] rounded-lg px-4 py-3 text-white placeholder-[#9ca3b8]/50 focus:outline-none focus:border-[#f59e0b]/50 transition-colors"
+                    placeholder="jane@company.com"
+                  />
+                </div>
+                <div>
+                  <label className="text-[#9ca3b8] text-sm font-medium block mb-2">Company</label>
+                  <input
+                    type="text"
+                    className="w-full bg-white/[0.04] border border-white/[0.08] rounded-lg px-4 py-3 text-white placeholder-[#9ca3b8]/50 focus:outline-none focus:border-[#f59e0b]/50 transition-colors"
+                    placeholder="Acme Financial Ltd"
+                  />
+                </div>
+                <div>
+                  <label className="text-[#9ca3b8] text-sm font-medium block mb-2">What are you looking for?</label>
+                  <textarea
+                    rows={4}
+                    className="w-full bg-white/[0.04] border border-white/[0.08] rounded-lg px-4 py-3 text-white placeholder-[#9ca3b8]/50 focus:outline-none focus:border-[#f59e0b]/50 transition-colors resize-none"
+                    placeholder="Tell us about your data challenge or the product you want to explore..."
+                  />
+                </div>
+                <a
+                  href="mailto:team@senolytics.ai"
+                  className="btn-primary w-full justify-center"
+                >
+                  Send Message
+                </a>
+                <p className="text-[#9ca3b8] text-xs text-center">
+                  Or email us directly at{" "}
+                  <a href="mailto:team@senolytics.ai" className="text-[#f59e0b] hover:underline">
+                    team@senolytics.ai
+                  </a>
+                </p>
+              </div>
             </div>
           </div>
         </div>

@@ -1,14 +1,17 @@
-export const metadata = { title: "Terms And Conditions — senolytics.ai" };
-export default function Page() {
+export const metadata = {
+  title: "Terms and Conditions — senolytics.ai",
+  description: "Terms and conditions governing use of Senolytics.ai products and website.",
+};
+
+export default function TermsAndConditionsPage() {
   return (
     <section className="bg-[#03032e] pt-32 pb-24 min-h-screen">
       <div className="max-w-3xl mx-auto px-6">
-        <h1 className="text-4xl font-black text-white mb-8">Terms And Conditions</h1>
-        <div className="text-gray-400 leading-relaxed space-y-4">
-          <p>This page is currently being updated. Please contact us at <a href="mailto:team@senolytics.ai" className="text-[#027fff] hover:underline">team@senolytics.ai</a> for any questions regarding our Terms And Conditions.</p>
-          <p>Senolytics.ai is a Brand of Bontida Limited. Registration: HE431123, Zinonos Kitieos 9, Egkomi 2406, Nicosia Cyprus.</p>
-        </div>
-      </div>
-    </section>
-  );
-}
+        <span className="text-[#027fff] text-xs font-bold uppercase tracking-[0.15em] block mb-4">Legal</span>
+        <h1 className="text-4xl md:text-5xl font-black text-white leading-tight mb-3">Terms and Conditions</h1>
+        <p className="text-[#8b8fa8] mb-12">Last updated: January 2024</p>
+
+        <div className="space-y-10 text-[#8b8fa8] leading-relaxed">
+
+          <div>
+            <h2 className="text-white font-bold text-xl mb-4">1. Intro

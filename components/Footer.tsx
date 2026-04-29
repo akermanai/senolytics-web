@@ -64,4 +64,36 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/privacy-policy" className="text-[#8
+                <Link href="/privacy-policy" className="text-[#8b8fa8] hover:text-white text-sm transition-colors">
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link href="/cookie-policy" className="text-[#8b8fa8] hover:text-white text-sm transition-colors">
+                  Cookie Policy
+                </Link>
+              </li>
+              <li>
+                <Link href="/terms-and-conditions" className="text-[#8b8fa8] hover:text-white text-sm transition-colors">
+                  Terms and Conditions
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div className="border-t border-[rgba(2,127,255,0.1)] pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-[#8b8fa8] text-xs">
+          <span>© {new Date().getFullYear()} Bontida Limited. Proudly made in sunny Cyprus.</span>
+          <span>
+            <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy</Link>
+            {" · "}
+            <Link href="/cookie-policy" className="hover:text-white transition-colors">Cookies</Link>
+            {" · "}
+            <Link href="/terms-and-conditions" className="hover:text-white transition-colors">Terms</Link>
+          </span>
+        </div>
+      </div>
+    </footer>
+  );
+}

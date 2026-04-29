@@ -5,38 +5,103 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
 :root {
-  --base: #03032e;
-  --blue: #027fff;
-  --white: #ffffff;
-  --accent-bg: #f6fcff;
+  --navy:    #03032e;
+  --navy-2:  #06063f;
+  --navy-3:  #0a0a55;
+  --blue:    #027fff;
+  --blue-2:  #0a8fff;
+  --glow:    rgba(2,127,255,0.15);
+  --border:  rgba(2,127,255,0.2);
+  --text:    #e8eaf6;
+  --muted:   #8b8fa8;
 }
 
+* { box-sizing: border-box; }
+
 body {
-  background-color: var(--base);
-  color: var(--white);
+  background-color: var(--navy);
+  color: var(--text);
   font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
 @layer components {
+  /* Buttons */
   .btn-primary {
-    @apply inline-flex items-center gap-2 bg-blue-brand text-white font-semibold px-6 py-3 rounded-lg hover:bg-blue-600 transition-colors;
+    @apply inline-flex items-center gap-2 bg-[#027fff] text-white font-semibold px-6 py-3 rounded-lg
+           hover:bg-[#0a8fff] transition-all duration-200 hover:shadow-[0_0_20px_rgba(2,127,255,0.4)];
   }
   .btn-outline {
-    @apply inline-flex items-center gap-2 border border-blue-brand text-blue-brand font-semibold px-6 py-3 rounded-lg hover:bg-blue-brand hover:text-white transition-colors;
+    @apply inline-flex items-center gap-2 border border-[#027fff]/50 text-[#027fff] font-semibold
+           px-6 py-3 rounded-lg hover:bg-[#027fff]/10 hover:border-[#027fff] transition-all duration-200;
   }
-  .section-navy {
-    @apply bg-[#03032e];
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 text-[#8b8fa8] font-medium px-4 py-2 rounded-lg
+           hover:text-white hover:bg-white/5 transition-all duration-200;
   }
-  .section-white {
-    @apply bg-white text-[#03032e];
+
+  /* Cards */
+  .card-dark {
+    @apply bg-[#06063f] border border-[rgba(2,127,255,0.15)] rounded-2xl p-8;
   }
-  .section-light {
-    @apply bg-[#f6fcff] text-[#03032e];
+  .card-glow {
+    @apply bg-[#06063f] border border-[rgba(2,127,255,0.25)] rounded-2xl p-8
+           hover:border-[rgba(2,127,255,0.5)] hover:shadow-[0_0_30px_rgba(2,127,255,0.1)]
+           transition-all duration-300;
   }
-  .card {
-    @apply bg-white rounded-2xl p-8 text-[#03032e];
+
+  /* Layout */
+  .section {
+    @apply py-24;
   }
-  .container-inner {
-    @apply max-w-6xl mx-auto px-6;
+  .section-sm {
+    @apply py-16;
   }
+
+  /* Typography */
+  .label {
+    @apply text-[#027fff] text-xs font-bold uppercase tracking-[0.15em];
+  }
+  .heading-xl {
+    @apply text-5xl md:text-6xl font-black text-white leading-[1.05] tracking-tight;
+  }
+  .heading-lg {
+    @apply text-4xl md:text-5xl font-black text-white leading-tight tracking-tight;
+  }
+  .heading-md {
+    @apply text-2xl md:text-3xl font-bold text-white leading-snug;
+  }
+  .body-lg {
+    @apply text-lg text-[#8b8fa8] leading-relaxed;
+  }
+  .body-md {
+    @apply text-base text-[#8b8fa8] leading-relaxed;
+  }
+
+  /* Blue glow divider */
+  .blue-line {
+    @apply w-12 h-0.5 bg-[#027fff] rounded-full mb-6;
+  }
+
+  /* Tag badge */
+  .badge {
+    @apply inline-flex items-center gap-1.5 text-[#027fff] text-xs font-semibold
+           bg-[#027fff]/10 border border-[#027fff]/20 rounded-full px-3 py-1;
+  }
+
+  /* Stat block */
+  .stat-value {
+    @apply text-5xl font-black text-white leading-none;
+  }
+  .stat-label {
+    @apply text-sm text-[#027fff] font-semibold uppercase tracking-wide mt-1;
+  }
+  .stat-desc {
+    @apply text-sm text-[#8b8fa8] leading-relaxed mt-2;
+  }
+}
+
+/* Subtle blue glow on page */
+.hero-glow {
+  background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(2,127,255,0.12) 0%, transparent 70%);
 }

@@ -1,55 +1,45 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export const metadata = {
-  title: "Funnel Optimization — senolytics.ai",
-  description:
-    "AI-powered funnel intelligence. Identify conversion bottlenecks and increase acquisition efficiency across every stage of your funnel.",
-};
-
-const capabilities = [
-  {
-    title: "Bottleneck Detection",
-    desc: "AI models scan every step of your acquisition funnel and surface the precise drop-off points costing you conversions.",
-  },
-  {
-    title: "Cohort Analysis",
-    desc: "Understand which user segments convert and why. Group users by behaviour, source, and signal to find your highest-value cohorts.",
-  },
-  {
-    title: "Predictive Scoring",
-    desc: "Score each lead on conversion probability in real time. Prioritise your team's effort on the leads most likely to convert.",
-  },
-  {
-    title: "A/B Recommendation Engine",
-    desc: "The system automatically surfaces test hypotheses ranked by expected impact, so you always know what to test next.",
-  },
-  {
-    title: "Attribution Modelling",
-    desc: "Move beyond last-click. Our multi-touch attribution models show the true contribution of every channel and touchpoint.",
-  },
-  {
-    title: "Stack Integration",
-    desc: "Connects to your existing CRM, ad platforms and analytics stack. No rip-and-replace required.",
-  },
-];
+export const metadata = { title: "Funnel Optimization — senolytics.ai" };
 
 export default function FunnelOptimizationPage() {
   return (
     <>
-      {/* ── Hero ── */}
-      <section className="relative bg-[#03032e] pt-32 pb-28 overflow-hidden">
-        <div className="hero-glow absolute inset-0 pointer-events-none" />
-        <div className="max-w-4xl mx-auto px-6 relative text-center">
-          <div className="inline-flex items-center gap-2 badge mb-6">
+      <section className="bg-[#03032e] pt-32 pb-24 text-center">
+        <div className="max-w-4xl mx-auto px-6">
+          <h1 className="text-5xl font-black text-white mb-6">Funnel Optimization</h1>
+          <p className="text-gray-300 text-xl leading-relaxed mb-10">
+            Our AI-powered funnel optimization product is currently in Beta. It leverages cutting-edge machine learning to identify conversion bottlenecks and increase acquisition efficiency across every stage of your funnel.
+          </p>
+          <div className="inline-flex items-center gap-2 bg-[#027fff]/20 border border-[#027fff]/30 rounded-full px-6 py-2 text-[#027fff] font-semibold text-sm mb-10">
             <span className="w-2 h-2 bg-[#027fff] rounded-full animate-pulse" />
             Currently in Beta
           </div>
-          <h1 className="heading-xl mb-6">Funnel Optimization</h1>
-          <p className="body-lg max-w-3xl mx-auto mb-10">
-            AI-powered funnel intelligence that identifies conversion bottlenecks and
-            increases acquisition efficiency across every stage of your funnel — designed
-            for ultra-competitive, regulated markets.
-          </p>
-          <Link href="/contact" className="btn-primary">
-      
+          <div className="block">
+            <Link href="/contact" className="btn-primary text-base px-8 py-4">Request Beta Access</Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#f6fcff] py-24">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl font-bold text-[#03032e] mb-6">Funnel Intelligence that Utilizes AI</h2>
+              <p className="text-gray-600 leading-relaxed mb-4">
+                Our funnel optimization product uses sophisticated AI models to analyze every stage of your customer acquisition funnel, identify weak points, and recommend data-driven improvements.
+              </p>
+              <p className="text-gray-600 leading-relaxed">
+                Designed specifically for businesses in ultra-competitive, highly regulated markets, the platform integrates seamlessly with your existing stack.
+              </p>
+            </div>
+            <div className="flex justify-center">
+              <Image src="/images/funnel-intelligence-utilizes.png" alt="Funnel Intelligence" width={400} height={400} className="rounded-2xl" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}

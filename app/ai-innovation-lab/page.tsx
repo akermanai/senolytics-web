@@ -1,87 +1,105 @@
 import Link from "next/link";
 
-export const metadata = { title: "AI Innovation Lab — senolytics.ai" };
+export const metadata = {
+  title: "AI Innovation Lab — senolytics.ai",
+  description: "Train proprietary AI models on your own data. Rapid prototyping. Currently open for financial services and iGaming.",
+};
 
-const useCases = [
-  { company: "Financial Service Company", desc: "Developing a fresh credit score model that projects with over 95% accuracy the likelihood of a customer repaying unsecured loans on time." },
-  { company: "Market Intelligence Provider", desc: "Analyze the report consumers and build a matrix of additional values the company can provide based on their information and current market position." },
-  { company: "Global Affiliate Platform", desc: "Analyze thousands of affiliate funnels and identify new clusters with earning potential and weak clusters that wear out the network profits." },
-  { company: "International eCommerce Brand", desc: "Analyze and improve a complex omni-channel environment. We train models and managed to reduce acquisition costs by 27%." },
+const process = [
+  { step: "01", title: "Discovery", desc: "Deep-dive into your business objectives, existing data assets, and competitive landscape. We identify where AI will move the needle fastest." },
+  { step: "02", title: "Model Design", desc: "Our data scientists design a model architecture tailored to your specific domain, data structure, and conversion goals." },
+  { step: "03", title: "Rapid Prototype", desc: "Within weeks, not months, you have a working model you can test against real traffic. We iterate fast with your feedback." },
+  { step: "04", title: "Optimise & Deploy", desc: "Once validated, we optimise for performance and scale, then deploy to your infrastructure or ours — your choice." },
 ];
 
 export default function AIInnovationLabPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-[#03032e] pt-32 pb-24 text-center">
-        <div className="max-w-4xl mx-auto px-6">
-          <h1 className="text-5xl font-black text-white mb-6">AI Innovation Lab</h1>
-          <p className="text-gray-300 text-xl leading-relaxed mb-10">
-            Our AI Lab is the place where the rubber meets the road. The Lab is open for businesses that already use our Conversion Intelligence products and want to get to the next level of AI-based success.
+      <section className="relative bg-[#03032e] pt-32 pb-28 overflow-hidden">
+        <div className="hero-glow absolute inset-0 pointer-events-none" />
+        <div className="max-w-4xl mx-auto px-6 relative text-center">
+          <div className="inline-flex items-center gap-2 badge mb-6">
+            <span className="w-2 h-2 bg-[#027fff] rounded-full" style={{animation:"pulse 2s infinite"}} />
+            Closed Beta
+          </div>
+          <h1 className="heading-xl mb-6">AI Innovation Lab</h1>
+          <p className="body-lg max-w-3xl mx-auto mb-10">
+            Train proprietary AI models on your own data. Our rapid prototyping
+            methodology takes you from concept to live model in weeks.
           </p>
-          <Link href="/contact" className="btn-primary text-base px-8 py-4">Request Beta Access</Link>
+          <Link href="/contact" className="btn-primary">Apply for Access</Link>
         </div>
       </section>
 
-      {/* What is the Lab */}
-      <section className="bg-[#f6fcff] py-24">
+      {/* What is it */}
+      <section className="bg-[#06063f] section">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-12">
+          <div className="grid md:grid-cols-2 gap-14 items-center">
             <div>
-              <h2 className="text-3xl font-bold text-[#03032e] mb-6">AI Innovation Lab</h2>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                Senolytics.ai state-of-the-art innovation lab puts the power of the world&apos;s most substantial AI models to work for your business. Everybody has access to ChatGPT and can write very nice prompts. But more is needed to build a robust competitive edge for companies operating in a competitive environment.
+              <span className="label block mb-4">What is the AI Lab?</span>
+              <h2 className="heading-lg mb-6">Your Own Proprietary AI Models</h2>
+              <p className="body-md mb-4">
+                The AI Innovation Lab is a bespoke engagement where Senolytics.ai data
+                scientists work alongside your team to design, train and deploy custom
+                AI models built on your own proprietary data.
               </p>
-              <p className="text-gray-600 leading-relaxed font-semibold">The secret lay in the training phase!</p>
-              <p className="text-gray-600 leading-relaxed mt-2">
-                Our experts develop proprietary training techniques that produce game-changing results for companies.
+              <p className="body-md mb-4">
+                Unlike off-the-shelf AI tools, models trained on your own data reflect
+                your specific customer base, market dynamics and conversion patterns.
+              </p>
+              <p className="body-md">
+                Currently operating in closed beta with a select group of partners in
+                financial services and iGaming.
               </p>
             </div>
-            <div>
-              <h3 className="text-xl font-bold text-[#03032e] mb-6">What do we do in the AI Lab?</h3>
-              <ul className="space-y-4 text-gray-600">
-                <li className="flex gap-3">
-                  <span className="text-[#027fff] font-bold mt-0.5">→</span>
-                  We customize our proprietary models to help your business find the answers to predefined challenges, validate assumptions and identify new profit opportunities.
-                </li>
-                <li className="flex gap-3">
-                  <span className="text-[#027fff] font-bold mt-0.5">→</span>
-                  We utilize a rapid prototyping and fail-fast methodology, so we can quickly see initial results.
-                </li>
-                <li className="flex gap-3">
-                  <span className="text-[#027fff] font-bold mt-0.5">→</span>
-                  We can also develop a neural network-based model that uses supervised learning and reinforcement learning techniques to establish progressive efficiency.
-                </li>
-              </ul>
+            <div className="grid grid-cols-2 gap-4">
+              {[
+                { val: "6–12", lbl: "Weeks to first model" },
+                { val: "100%", lbl: "Your data, your IP" },
+                { val: "EU", lbl: "Data stays in EU" },
+                { val: "24/7", lbl: "Model monitoring" },
+              ].map((s) => (
+                <div key={s.lbl} className="card-glow text-center py-6">
+                  <div className="text-3xl font-black text-white mb-1">{s.val}</div>
+                  <div className="stat-label">{s.lbl}</div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* Use Cases */}
-      <section className="bg-[#03032e] py-24">
+      {/* Process */}
+      <section className="bg-[#03032e] section">
         <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-white mb-4">How Companies Are Using AI Innovation Lab</h2>
-          <p className="text-gray-400 mb-12">Here are some recent examples of how companies use our AI innovation lab to thrive:</p>
+          <span className="label block mb-4">The Process</span>
+          <h2 className="heading-lg mb-12">From Discovery to Deployment</h2>
           <div className="grid md:grid-cols-2 gap-6">
-            {useCases.map(u => (
-              <div key={u.company} className="bg-[#06063f] border border-white/10 rounded-2xl p-8">
-                <div className="text-[#027fff] font-semibold text-sm uppercase tracking-widest mb-3">{u.company}</div>
-                <p className="text-gray-300 leading-relaxed">{u.desc}</p>
+            {process.map((p) => (
+              <div key={p.step} className="card-glow">
+                <span className="text-5xl font-black text-[#027fff]/20 block mb-3">{p.step}</span>
+                <h3 className="text-white font-bold text-xl mb-3">{p.title}</h3>
+                <p className="body-md">{p.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Beta CTA */}
-      <section className="bg-[#027fff] py-20">
+      {/* CTA */}
+      <section className="bg-[#06063f] section border-t border-[rgba(2,127,255,0.15)]">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-black text-white mb-4">AI Projection Lab is in Closed Beta</h2>
-          <p className="text-blue-100 text-lg mb-8">
-            Currently our AI lab is open for companies operating in the financial services niche only.
+          <span className="label block mb-4">Apply for Closed Beta</span>
+          <h2 className="heading-lg mb-6">Build Your Competitive Moat</h2>
+          <p className="body-lg max-w-2xl mx-auto mb-4">
+            A proprietary AI model trained on your data is one of the most durable
+            competitive advantages you can build. Let&apos;s build it together.
           </p>
-          <Link href="/contact" className="bg-white text-[#027fff] font-bold px-8 py-4 rounded-lg hover:bg-blue-50 transition-colors">Request More Information</Link>
+          <p className="text-white font-semibold mb-10">
+            Currently accepting applications from financial services and iGaming companies.
+          </p>
+          <Link href="/contact" className="btn-primary">Apply Now</Link>
         </div>
       </section>
     </>

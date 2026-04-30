@@ -252,15 +252,15 @@ export default function LeadShieldPage() {
         <div className="max-w-4xl mx-auto px-6 text-center">
           <span className="label block mb-4">Pricing</span>
           <h2 className="heading-lg mb-4">
-            Get Our Most Accurate Phone &amp; Email Validation for Less Than \u20ac0.1 Per Check
+            Get Our Most Accurate Phone &amp; Email Validation for Less Than $0.1 Per Check
           </h2>
           <p className="body-lg max-w-2xl mx-auto mb-4">
             Yes, you read it right. You can use our LeadShield L6 Enterprise edition for
-            less than \u20ac0.1 per complete check. And the great thing about it is that full
+            less than $0.1 per complete check. And the great thing about it is that full
             email, mobile phone, and IP validation takes less than 0.2 seconds.
           </p>
           <p className="text-white font-semibold mb-10">
-            Get as many credits as you need \u00b7 No monthly subscription \u00b7 No hidden fees \u00b7 No contract required
+            Get as many credits as you need · No monthly subscription · No hidden fees · No contract required
           </p>
           <Link href="/contact" className="btn-primary">
             Request More Information

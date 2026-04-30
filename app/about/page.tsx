@@ -11,9 +11,10 @@ const team = [
   { name: "Sixtine Vervial", role: "Data Hero", bio: "Data Scientist with experience at JustWatch, Duproprio, Zalando, Snowplow Analytics and more — covering infrastructure design, data engineering, ETL development and stack review.", img: "Sixtine-Vervial.jpg" },
   { name: "Polina Nesterenko", role: "Legal Hero", bio: "PhD in Law, LL.M in Mediation, AML Compliance Officer. Hands-on experience with cross-border transactions, M&A, fraud prevention and compliance frameworks.", img: "polina.jpg" },
   { name: "Martin Olney", role: "Strategy Hero", bio: "Business strategist specialising in disruptive technology adoption, startups, sustainable competitive advantage, differentiators and niche marketing.", img: "Martin.jpg" },
-  { name: "Loredana Mir", role: "Accounting Hero", bio: "ACCA, MSc. Senior financial analyst working with the world's most significant accounting firms. Results-oriented, proactively challenging the status quo.", img: "Loredana.jpg" },
+  { name: "Loredana Mir", role: "Accounting Hero", bio: "ACCA, MSc. Senior financial analyst working with the world’s most significant accounting firms. Results-oriented, proactively challenging the status quo.", img: "Loredana.jpg" },
   { name: "Avner Nissani", role: "Data Hero", bio: "Specialties: Data Modeling, Data Warehouses, Analytics, Data Mining, Machine Learning, Big Data, SQL Server, AWS, Kafka and Data Streaming.", img: "avner_nissani.jpg" },
   { name: "David Hennessy", role: "Development Hero", bio: "Full-stack developer with 15+ years helping companies build complex web applications. Particularly passionate about leveraging AI to drive traffic and conversion growth.", img: "davie-hennessy.jpg" },
+  { name: "Rudi Rudiak", role: "R & SQL Hero", bio: "Senior data analyst with vast experience developing R scripts, refining ETLs, automating data processing, and focusing on data cleaning and structuring with R & SQL and building executive dashboards.", img: "Rudi_edit.png" },
 ];
 
 export default function AboutPage() {
@@ -26,8 +27,9 @@ export default function AboutPage() {
           <span className="label block mb-4">About Us</span>
           <h1 className="heading-xl mb-6">The Team Behind Senolytics.ai</h1>
           <p className="body-lg max-w-3xl mx-auto">
-            A focused team of data scientists, engineers, and business strategists
-            building AI products for conversion intelligence.
+            Our team comprises operational people and scientific advisors, including
+            PhD-level scientists and engineers with experience across some of the world’s
+            most prominent universities and technology companies.
           </p>
         </div>
       </section>
@@ -45,22 +47,22 @@ export default function AboutPage() {
                 business optimisation fast.
               </p>
               <p className="body-md">
-                We train the world&apos;s most powerful AI models to help businesses
-                profit more, reduce the cost of acquisition, gain a competitive edge
-                and prevent fraud.
+                We train the world’s most powerful AI models, including OpenAI (ChatGPT),
+                to help your business profit more, reduce the cost of acquisition, gain a
+                competitive edge and prevent fraud.
               </p>
             </div>
             <div className="card-glow">
               <div className="blue-line" />
-              <h2 className="heading-md mb-4">Our Focus</h2>
+              <h2 className="heading-md mb-4">Made in Cyprus</h2>
               <p className="body-md mb-4">
-                Our team has vast experience with regulatory guidelines including GDPR,
-                ISO 27001 and Financial Conduct Authority (FCA) standards.
+                Senolytics.ai is headquartered in Cyprus. We love Cyprus. It is a small
+                island that attracts many great minds. We enjoy the sun, the fresh food
+                and the friendly people.
               </p>
               <p className="body-md">
-                We develop novel products, models and intellectual property specifically
-                for businesses operating in ultra-competitive, regulated niches —
-                financial services, iGaming, insurance and beyond.
+                We are a nomad-based company — our team works worldwide, and we never
+                limit our talent acquisition to one physical location.
               </p>
             </div>
           </div>
@@ -114,7 +116,7 @@ export default function AboutPage() {
               {[
                 { val: "2020", lbl: "Founded" },
                 { val: "EU", lbl: "Based in Cyprus" },
-                { val: "7+", lbl: "Team members" },
+                { val: "8+", lbl: "Team members" },
                 { val: "3", lbl: "AI Products" },
               ].map((s) => (
                 <div key={s.lbl} className="card-glow text-center py-6">

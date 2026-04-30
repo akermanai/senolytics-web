@@ -42,6 +42,7 @@ export default function HomePage() {
                   width={480}
                   height={480}
                   className="relative rounded-2xl"
+                  priority
                 />
               </div>
             </div>
@@ -157,8 +158,38 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Neural Network */}
+      {/* Funnel Intelligence Feature */}
       <section className="bg-[#06063f] section">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-14 items-center">
+            <div className="flex justify-center">
+              <div className="relative">
+                <div className="absolute inset-0 bg-[#f59e0b]/10 blur-3xl rounded-full scale-75" />
+                <Image
+                  src="/images/funnel-intelligence-utilizes.png"
+                  alt="Funnel Intelligence AI analysis"
+                  width={460}
+                  height={460}
+                  className="relative rounded-2xl border border-[rgba(245,158,11,0.15)]"
+                />
+              </div>
+            </div>
+            <div>
+              <span className="label block mb-3">AI Funnel Intelligence</span>
+              <h2 className="heading-lg mb-6">Stop Losing Conversions</h2>
+              <p className="body-lg mb-6">
+                Senolytics.ai Funnel Intelligence utilizes advanced AI libraries
+                explicitly trained to detect cracks in any conversion funnel. Using NLP,
+                results are presented in human easy-to-read language.
+              </p>
+              <Link href="/funnel-optimization" className="btn-primary">Learn More</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Neural Network */}
+      <section className="bg-[#03032e] section">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-14 items-center">
             <div>
@@ -192,7 +223,7 @@ export default function HomePage() {
       </section>
 
       {/* Data Centers */}
-      <section className="bg-[#03032e] section">
+      <section className="bg-[#06063f] section">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-14 items-center">
             <div className="flex justify-center order-2 md:order-1">
@@ -211,12 +242,12 @@ export default function HomePage() {
               <span className="label block mb-3">Infrastructure</span>
               <h2 className="heading-lg mb-6">Enterprise-Grade Security</h2>
               <p className="body-lg mb-4">
-                Our data is hosted in SOC 2 Type II and ISO 27001 certified data centres
+                Our data is hosted in SOC 2 Type II and ISO 27001 certified data centres
                 in Falkenstein, Germany, operated 100% by renewable energy.
               </p>
               <p className="body-md">
                 Data of EU and UK customers does not leave the EU. We comply with GDPR,
-                FCA and ISO 27001 standards to give you enterprise-grade confidence.
+                FCA and ISO 27001 standards to give you enterprise-grade confidence.
               </p>
             </div>
           </div>
@@ -224,7 +255,7 @@ export default function HomePage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-[#06063f] section border-t border-[rgba(2,127,255,0.15)]">
+      <section className="bg-[#03032e] section border-t border-[rgba(2,127,255,0.15)]">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <span className="label block mb-4">Get Started</span>
           <h2 className="heading-lg mb-6">Ready to Boost Conversion?</h2>
